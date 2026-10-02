@@ -119,7 +119,8 @@ export function useSequenceInference(latestResult: any, isActive: boolean) {
       await new Promise(r => setTimeout(r, 25)); // fake WASM wait
       
       if (isMountedRef.current) {
-        setState({
+        setState(s => ({
+          ...s,
           signState: "Result",
           predictions: [{
             label: "UNKNOWN",
@@ -131,7 +132,7 @@ export function useSequenceInference(latestResult: any, isActive: boolean) {
           }],
           inferenceLatency: performance.now() - start,
           modelError: null
-        });
+        }));
         
         // Reset back to waiting after a moment
         setTimeout(() => {
