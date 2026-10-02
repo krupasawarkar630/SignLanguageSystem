@@ -145,7 +145,7 @@ export function useGestureInference(
           let probabilities: number[] = [];
           
           // ONNX zipmap output handling
-          if (probTensor.type === "sequence") {
+          if ((probTensor.type as string) === "sequence") {
             // Some sklearn pipelines output Sequence<Map<Int64, Float>>
             // We'll iterate through the map
             const seq = probTensor.data as unknown as any[]; // usually an array of Map-like structures
