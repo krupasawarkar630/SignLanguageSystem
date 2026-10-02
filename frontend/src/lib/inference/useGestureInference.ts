@@ -199,7 +199,7 @@ export function useGestureInference(
             handIndex: i,
             handedness,
             top3: topProbs,
-            rawFeatures: Array.from(features)
+            rawFeatures: features.totalFeatureVector
           });
 
         } catch (e) {
