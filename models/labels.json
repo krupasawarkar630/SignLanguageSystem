@@ -1,0 +1,14 @@
+{
+  "classes": [
+    "A",
+    "B"
+  ],
+  "index_to_label": {
+    "0": "A",
+    "1": "B"
+  },
+  "label_to_index": {
+    "A": 0,
+    "B": 1
+  }
+}

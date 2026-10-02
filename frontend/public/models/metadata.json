@@ -1,0 +1,220 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-10-02T13:23:05.652807+00:00",
+  "selected_model": "RandomForest",
+  "feature_spec_version": "1.0.0-82d",
+  "feature_dimensions": 82,
+  "classes": [
+    "A",
+    "B"
+  ],
+  "class_counts": {
+    "A": 10,
+    "B": 10
+  },
+  "total_samples": 20,
+  "split_counts": {
+    "train": 14,
+    "validation": 3,
+    "test": 3
+  },
+  "dataset_hash": "96398d8cf93d314c",
+  "unknown_threshold": {
+    "optimal_threshold": 0.4,
+    "strategy": "validation_accuracy_coverage_tradeoff",
+    "accepted_accuracy": 0.6667,
+    "coverage": 1.0,
+    "sweep_results": [
+      {
+        "threshold": 0.4,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.6667,
+        "score": 0.6667
+      },
+      {
+        "threshold": 0.42,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.6667,
+        "score": 0.6667
+      },
+      {
+        "threshold": 0.439,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.6667,
+        "score": 0.6667
+      },
+      {
+        "threshold": 0.459,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.6667,
+        "score": 0.6667
+      },
+      {
+        "threshold": 0.479,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.6667,
+        "score": 0.6667
+      },
+      {
+        "threshold": 0.498,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.6667,
+        "score": 0.6667
+      },
+      {
+        "threshold": 0.518,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.537,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.557,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.577,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.596,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.616,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.636,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.655,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.675,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.695,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.714,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.734,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.754,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.773,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.793,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.812,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.832,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.852,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.871,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.891,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.911,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.93,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      },
+      {
+        "threshold": 0.95,
+        "coverage": 0.0,
+        "accepted_accuracy": 0.0,
+        "score": 0.0
+      }
+    ]
+  },
+  "onnx_parity_verification": {
+    "status": "PASSED",
+    "label_match_rate": 1.0,
+    "max_prob_difference": 0.0,
+    "test_samples_evaluated": 3,
+    "verified_at": "2026-10-02T13:23:05.594505+00:00"
+  },
+  "guard_rail_warnings": [
+    "Small total dataset size (20 samples). For production reliability, record at least 50-100+ samples per gesture across multiple sessions."
+  ],
+  "library_versions": {
+    "scikit_learn": "1.9.1",
+    "onnx": "1.23.1",
+    "onnxruntime": "1.30.0",
+    "numpy": "2.5.3"
+  }
+}

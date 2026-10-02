@@ -1,0 +1,38 @@
+[
+  {
+    "id": "A",
+    "name": "Letter A",
+    "category": "Alphabet",
+    "description": "Fist closed, thumb resting against the side of the index finger.",
+    "supportedHand": "Right",
+    "difficulty": "Easy",
+    "examplePhrase": "A is for Apple"
+  },
+  {
+    "id": "B",
+    "name": "Letter B",
+    "category": "Alphabet",
+    "description": "Fingers straight and together, thumb tucked over palm.",
+    "supportedHand": "Right",
+    "difficulty": "Easy",
+    "examplePhrase": "B is for Boy"
+  },
+  {
+    "id": "HELLO",
+    "name": "Hello",
+    "category": "Greetings",
+    "description": "Fingers together, touching the forehead and moving away in a slight salute.",
+    "supportedHand": "Either",
+    "difficulty": "Easy",
+    "examplePhrase": "Hello, how are you?"
+  },
+  {
+    "id": "THANK_YOU",
+    "name": "Thank You",
+    "category": "Common phrases",
+    "description": "Fingertips touch the chin, then move forward and down.",
+    "supportedHand": "Either",
+    "difficulty": "Easy",
+    "examplePhrase": "Thank you so much"
+  }
+]

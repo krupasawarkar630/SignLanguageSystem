@@ -1,0 +1,110 @@
+{
+  "best_model": "RandomForest",
+  "evaluated_at": "2026-10-02T13:23:05.658509+00:00",
+  "models": {
+    "RandomForest": {
+      "validation": {
+        "accuracy": 0.6667,
+        "macro_f1": 0.4,
+        "macro_precision": 0.3333,
+        "macro_recall": 0.5
+      },
+      "test": {
+        "accuracy": 0.3333,
+        "macro_f1": 0.25,
+        "macro_precision": 0.1667,
+        "macro_recall": 0.5
+      },
+      "training_time_ms": 268.29,
+      "cv_macro_f1": 0.3567,
+      "latency": {
+        "median_ms": 12.838800001190975,
+        "p25_ms": 12.045350001244515,
+        "p75_ms": 14.925649998986046,
+        "p95_ms": 20.906805001141038,
+        "std_ms": 5.046803872101164,
+        "repetitions": 300
+      },
+      "model_size_bytes": 39380,
+      "calibration_status": "Ensemble vote fractions (uncalibrated)"
+    },
+    "SVM": {
+      "validation": {
+        "accuracy": 0.6667,
+        "macro_f1": 0.4,
+        "macro_precision": 0.3333,
+        "macro_recall": 0.5
+      },
+      "test": {
+        "accuracy": 0.3333,
+        "macro_f1": 0.25,
+        "macro_precision": 0.1667,
+        "macro_recall": 0.5
+      },
+      "training_time_ms": 8.29,
+      "cv_macro_f1": 0.3867,
+      "latency": {
+        "median_ms": 0.25099999766098335,
+        "p25_ms": 0.24789999952190556,
+        "p75_ms": 0.27414999840402743,
+        "p95_ms": 0.44382499963830924,
+        "std_ms": 0.06542643494459503,
+        "repetitions": 300
+      },
+      "model_size_bytes": 10770,
+      "calibration_status": "Platt scaling (inherent in SVC probability=True)"
+    },
+    "KNN": {
+      "validation": {
+        "accuracy": 0.6667,
+        "macro_f1": 0.4,
+        "macro_precision": 0.3333,
+        "macro_recall": 0.5
+      },
+      "test": {
+        "accuracy": 0.3333,
+        "macro_f1": 0.25,
+        "macro_precision": 0.1667,
+        "macro_recall": 0.5
+      },
+      "training_time_ms": 1.06,
+      "cv_macro_f1": 0.2967,
+      "latency": {
+        "median_ms": 5.981399999654968,
+        "p25_ms": 5.724650000047404,
+        "p75_ms": 6.200925000484858,
+        "p95_ms": 6.554009998762922,
+        "std_ms": 0.3725006870868691,
+        "repetitions": 300
+      },
+      "model_size_bytes": 5367,
+      "calibration_status": "Distance-weighted inverse ratios"
+    },
+    "MLP": {
+      "validation": {
+        "accuracy": 0.6667,
+        "macro_f1": 0.4,
+        "macro_precision": 0.3333,
+        "macro_recall": 0.5
+      },
+      "test": {
+        "accuracy": 0.3333,
+        "macro_f1": 0.25,
+        "macro_precision": 0.1667,
+        "macro_recall": 0.5
+      },
+      "training_time_ms": 35.54,
+      "cv_macro_f1": 0.2667,
+      "latency": {
+        "median_ms": 0.3202999996574363,
+        "p25_ms": 0.2910250004788395,
+        "p75_ms": 0.3608250008255709,
+        "p95_ms": 0.44691500061162515,
+        "std_ms": 0.0606843330180409,
+        "repetitions": 300
+      },
+      "model_size_bytes": 126758,
+      "calibration_status": "Softmax output probabilities"
+    }
+  }
+}

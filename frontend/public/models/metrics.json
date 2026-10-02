@@ -1,0 +1,27 @@
+{
+  "model_name": "RandomForest",
+  "test_metrics": {
+    "accuracy": 0.3333,
+    "macro_f1": 0.25,
+    "macro_precision": 0.1667,
+    "macro_recall": 0.5
+  },
+  "validation_metrics": {
+    "accuracy": 0.6667,
+    "macro_f1": 0.4,
+    "macro_precision": 0.3333,
+    "macro_recall": 0.5
+  },
+  "latency_benchmark": {
+    "median_ms": 12.838800001190975,
+    "p25_ms": 12.045350001244515,
+    "p75_ms": 14.925649998986046,
+    "p95_ms": 20.906805001141038,
+    "std_ms": 5.046803872101164,
+    "repetitions": 300
+  },
+  "training_time_ms": 268.29,
+  "cross_val_macro_f1": 0.3567,
+  "model_size_bytes": 39380,
+  "calibration_status": "Ensemble vote fractions (uncalibrated)"
+}
