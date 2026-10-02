@@ -9,6 +9,9 @@ interface SequenceInferenceState {
   predictions: PredictionResult[];
   inferenceLatency: number;
   modelError: string | null;
+  isModelLoading: boolean;
+  stabilizedLabel: string;
+  stabilizedConfidence: number;
 }
 
 const MOTION_THRESHOLD = 0.02; // Change in normalized position to trigger "Signing"
@@ -20,7 +23,10 @@ export function useSequenceInference(latestResult: any, isActive: boolean) {
     signState: "Waiting",
     predictions: [],
     inferenceLatency: 0,
-    modelError: null
+    modelError: null,
+    isModelLoading: true,
+    stabilizedLabel: "—",
+    stabilizedConfidence: 0,
   });
 
   const bufferRef = useRef<any[]>([]);
@@ -38,10 +44,11 @@ export function useSequenceInference(latestResult: any, isActive: boolean) {
         });
         if (isMountedRef.current) {
           sessionRef.current = session;
+          setState(s => ({ ...s, isModelLoading: false }));
         }
       } catch (err: any) {
         if (isMountedRef.current) {
-          setState(s => ({ ...s, modelError: "Sequence model unavailable (run Phase 10 training)" }));
+          setState(s => ({ ...s, modelError: "Sequence model unavailable (run Phase 10 training)", isModelLoading: false }));
         }
       }
     }

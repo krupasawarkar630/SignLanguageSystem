@@ -6,7 +6,7 @@ export async function POST(req: Request) {
   try {
     const pythonScript = path.resolve(process.cwd(), "../backend/train.py"); // Example path to training script
     
-    return new Promise((resolve) => {
+    return new Promise<NextResponse>((resolve) => {
       const proc = spawn("python", [pythonScript, "--auto"], {
         cwd: path.resolve(process.cwd(), "../backend"),
       });

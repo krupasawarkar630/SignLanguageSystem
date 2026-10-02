@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import * as ort from "onnxruntime-web";
 import { HandDetectionResult } from "@/types/hand";
-import { extractFeatures } from "@/lib/features/preprocessor";
+import { preprocessLandmarks } from "@/lib/features/preprocessor";
 
 export interface InferenceMetadata {
   classes: string[];
@@ -127,12 +127,12 @@ export function useGestureInference(
         const handedness = latestResult.handedness[i]?.categoryName as "Left" | "Right";
         
         try {
-          const features = extractFeatures(landmarks);
+          const features = preprocessLandmarks(landmarks);
           if (!features) continue;
 
           // Our RandomForest scikit-learn ONNX model usually takes a float32 array
           // and outputs label + probabilities
-          const tensor = new ort.Tensor("float32", new Float32Array(features), [1, features.length]);
+          const tensor = new ort.Tensor("float32", new Float32Array(features.totalFeatureVector), [1, features.totalFeatureVector.length]);
           const feeds: Record<string, ort.Tensor> = {};
           feeds[session.inputNames[0]] = tensor;
 

@@ -49,6 +49,7 @@ function TranslateStudioContent() {
   const inference = translationMode === "fingerspelling" 
     ? staticInference 
     : {
+        isModelLoading: sequenceInference.isModelLoading,
         stabilizedLabel: sequenceInference.signState === "Result" ? (sequenceInference.predictions[0]?.label || "—") : "—",
         stabilizedConfidence: sequenceInference.predictions[0]?.confidence || 0,
         modelError: sequenceInference.modelError,
